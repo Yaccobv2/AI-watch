@@ -17,9 +17,9 @@ class Yolo:
     make predictions.
     """
     def __init__(self, confidenceFilter: float = 0.5, threshold: float = 0.3,
-                 yoloCfgFile: str = "../networks/yolo/cfg/yolov4-tiny.cfg",
-                 yoloWeightsFile: str = "../networks/yolo/yolov4-tiny_best-v2.weights",
-                 yoloNamesFile: str = "../networks/yolo/cfg/yolov4.names"):
+                 yoloCfgFile: str = "./networks/yolo/cfg/yolov4-tiny.cfg",
+                 yoloWeightsFile: str = "./networks/yolo/yolov4-tiny_best.weights",
+                 yoloNamesFile: str = "./networks/yolo/cfg/yolov4.names"):
         """
         Init yolo ANN detector module.
 
@@ -57,6 +57,8 @@ class Yolo:
         # noinspection PyBroadException
         try:
             self.yolo = cv2.dnn.readNetFromDarknet(self.yolo_cfg_file, self.yolo_weights_file)
+            self.yolo.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+            self.yolo.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
         except Exception as e:
             print("Can't load yolo config or weights: " + str(e))
 

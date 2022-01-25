@@ -1,7 +1,7 @@
 # AI-watch
 AI system to detect pedestrians using cell phones.
 
-#Purpose of the project
+# Purpose of the project
 
 The aim of the project is to create a vision system capable of detecting whether a pedestrian is actively using a cell phone. The project is intended to increase pedestrian safety and reduce the number of accidents. The system is to detect pedestrians and the phones held in their hands, analyze the posture of each person and then decide whether the person is actively using the phone.
 

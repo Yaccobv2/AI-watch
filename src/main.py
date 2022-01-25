@@ -1,7 +1,7 @@
 """
 Phone users detection project.
 """
-from image_processor import start_detection
+from src.image_processor import start_detection
 
 
 def main() -> None:
@@ -9,7 +9,7 @@ def main() -> None:
     Main
     :return: None
     """
-    start_detection(networkInputFrameSize=(416, 416))
+    start_detection(networkInputFrameSize=(416, 416), poseModelComplexity=1)
 
 
 if __name__ == "__main__":
