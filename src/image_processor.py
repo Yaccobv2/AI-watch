@@ -12,7 +12,7 @@ from src.yolo import Yolo
 
 
 def start_detection(inputSource: Union[str, int] = 0, networkInputFrameSize: Tuple = (416, 416),
-                    poseModelComplexity: int = 0) -> None:
+                    poseModelComplexity: int = 1) -> None:
     """
         Start program loop. You can break it using "q" key.
 
