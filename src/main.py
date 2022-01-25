@@ -1,7 +1,7 @@
 """
 Phone users detection project.
 """
-from src.image_processor import start_detection
+from image_processor import start_detection
 
 
 def main() -> None:

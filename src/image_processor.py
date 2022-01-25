@@ -6,13 +6,13 @@ from typing import Tuple, List, Any, Union
 
 import cv2
 
-from src.phone_user_detector import detect_phone_users
-from src.pose_detetion_module import PoseDetector
-from src.yolo import Yolo
+from phone_user_detector import detect_phone_users
+from pose_detetion_module import PoseDetector
+from yolo import Yolo
 
 
 def start_detection(inputSource: Union[str, int] = 0, networkInputFrameSize: Tuple = (416, 416),
-                    poseModelComplexity: int = 0) -> None:
+                    poseModelComplexity: int = 1) -> None:
     """
         Start program loop. You can break it using "q" key.
 

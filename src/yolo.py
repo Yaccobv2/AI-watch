@@ -17,9 +17,9 @@ class Yolo:
     make predictions.
     """
     def __init__(self, confidenceFilter: float = 0.5, threshold: float = 0.3,
-                 yoloCfgFile: str = "./networks/yolo/cfg/yolov4-tiny.cfg",
-                 yoloWeightsFile: str = "./networks/yolo/yolov4-tiny_best-v2.weights",
-                 yoloNamesFile: str = "./networks/yolo/cfg/yolov4.names"):
+                 yoloCfgFile: str = "../networks/yolo/cfg/yolov4-tiny.cfg",
+                 yoloWeightsFile: str = "../networks/yolo/yolov4-tiny_best-v2.weights",
+                 yoloNamesFile: str = "../networks/yolo/cfg/yolov4.names"):
         """
         Init yolo ANN detector module.
 
